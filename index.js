@@ -16,7 +16,7 @@ document.addEventListener("keypress",function(event){
     // alert("Key was pressed!");
 
     makesound(event.key);
-    buttonanimation(event.key);
+    buttonanimation(event,key);
 }) 
 function makesound(key){
 
@@ -66,4 +66,5 @@ function buttonanimation(currentkey){
 
     },100)
 }
+
 
