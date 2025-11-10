@@ -5,7 +5,6 @@ let drums = document.getElementsByClassName("drum");
  for(let i=0;i<drums.length;i++){
     drums[i].addEventListener("click",(e)=>{
         let buttonInnerHTML = e.target.innerHTML;
-        eval("console.log('" + buttonInnerHTML + "')");
         makesound(buttonInnerHTML);
         buttonanimation(buttonInnerHTML);
     })
