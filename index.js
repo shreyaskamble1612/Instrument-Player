@@ -5,6 +5,7 @@ let drums = document.getElementsByClassName("drum");
  for(let i=0;i<drums.length;i++){
     drums[i].addEventListener("click",(e)=>{
         let buttonInnerHTML = e.target.innerHTML;
+        eval("console.log('" + buttonInnerHTML + "')");
         makesound(buttonInnerHTML);
         buttonanimation(buttonInnerHTML);
     })
@@ -14,14 +15,14 @@ let drums = document.getElementsByClassName("drum");
 document.addEventListener("keypress",function(event){
     // alert("Key was pressed!");
 
-    makesound(event.key);
+    makesound(event,key);
     buttonanimation(event.key);
 }) 
 function makesound(key){
 
     switch (key) {
         case "w":
-            let tom1 = new Audio("sounds/tom-1.mp3");
+            let tom11 = new Audio("sounds/tom-1.mp3");
             tom1.play();
             break;
         case "a":
